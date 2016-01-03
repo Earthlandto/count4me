@@ -2,7 +2,7 @@
 
 
 // set the date we're counting down to
-var target_date = new Date("Feb 7, 2016").getTime();
+var target_date = new Date("Feb 7 2016 23:59:59").getTime();
 
 // variables for time units
 var days, hours, minutes, seconds;
