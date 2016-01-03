@@ -8,7 +8,7 @@ var target_date = new Date("Feb 4, 2016").getTime();
 var days, hours, minutes, seconds;
 
 // get tag element
-var countdown = document.getElementById("countdown");
+var countdown = document.getElementById('countdown');
 
 // update the tag with id "countdown" every 1 second
 setInterval(function () {
@@ -28,6 +28,7 @@ setInterval(function () {
     seconds = parseInt(seconds_left % 60);
 
     // format countdown string + set tag value
+    console.log(countdown);
     countdown.innerHTML = days + "d, " + hours + "h, "
     + minutes + "m, " + seconds + "s";
 
