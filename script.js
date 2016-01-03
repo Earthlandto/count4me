@@ -2,7 +2,7 @@
 
 
 // set the date we're counting down to
-var target_date = new Date("Feb 4, 2016").getTime();
+var target_date = new Date("Feb 7, 2016").getTime();
 
 // variables for time units
 var days, hours, minutes, seconds;
@@ -10,9 +10,8 @@ var days, hours, minutes, seconds;
 // get tag element
 var countdown = document.getElementById('countdown');
 
-// update the tag with id "countdown" every 1 second
-setInterval(function () {
 
+var update = function (){
     // find the amount of "seconds" between now and target
     var current_date = new Date().getTime();
     var seconds_left = (target_date - current_date) / 1000;
@@ -31,4 +30,7 @@ setInterval(function () {
     countdown.innerHTML = days + "d, " + hours + "h, "
     + minutes + "m, " + seconds + "s";
 
-}, 1000);
+};
+
+// update the tag with id "countdown" every 1 second
+setInterval(update, 1000);
