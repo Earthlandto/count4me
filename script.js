@@ -28,7 +28,6 @@ setInterval(function () {
     seconds = parseInt(seconds_left % 60);
 
     // format countdown string + set tag value
-    console.log(countdown);
     countdown.innerHTML = days + "d, " + hours + "h, "
     + minutes + "m, " + seconds + "s";
 
