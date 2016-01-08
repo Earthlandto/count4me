@@ -1,16 +1,27 @@
 <html>
-
 <style>
 </style>
 
 <head>
-	<title>A simple countdown for mi degree final proyect</title>
+    <title>A simple countdown for mi degree final proyect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/animations.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
-<body onload="update();">
-	<div>
-		<p>Time remaining: <span id="countdown"></span>!</p>
-	</div>
-<script type="text/javascript" src="script.js"></script>
+
+<body>
+    <div clas="countdown">
+        <h2 id="par-countdown">
+            Time remaining:
+        		<span id="days"></span> days, <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+        </h2>
+    </div>
+    <span class="bg"></span>
 </body>
 
 </html>
