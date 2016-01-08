@@ -11,7 +11,7 @@ Next February 9, 2015 is my deadline to present my degree final project :noteboo
 
 ###where?
 
-[Here](earthalndto.github.io/count4me)
+[Here](https:earthlandto.github.io/count4me)
 
 ###Can i fork?
 
