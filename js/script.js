@@ -30,4 +30,4 @@ $(document).ready(function() {
     // update the tag with id "countdown" every 1 second
     setInterval(update, 1000);
     update();
-})
+});
