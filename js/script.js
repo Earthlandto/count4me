@@ -20,14 +20,15 @@ $(document).ready(function() {
         minutes = parseInt(seconds_left / 60);
         seconds = parseInt(seconds_left % 60);
 
-        // return {days, hours, minutes, seconds};
+        // change attibutes
         $("#days").text(days);
         $("#hours").text(hours);
         $("#minutes").text(minutes);
         $("#seconds").text(seconds);
 
     };
-    // update the tag with id "countdown" every 1 second
+    // set the function to update each 1 second.
     setInterval(update, 1000);
+    //exec just at the begining to do not wait the first second.
     update();
 });

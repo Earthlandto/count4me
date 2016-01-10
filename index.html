@@ -12,18 +12,25 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
+    var lastShowed;
     var questions = ['why', 'how', 'what', 'who'];
     $(document).ready(function() {
 
+        //Adding the click handler by question 'id'
         questions.forEach(function(elem) {
-            console.log(elem);
             $('#question-' + elem).click(function() {
-                $(".answer-entry").fadeOut('slow');
-                $("#answer-header").text(elem + '?');
-                $("#answer-header").css('text-transform', 'capitalize');
-                $("#answer-" + elem).fadeIn('slow');
+                if (elem !== lastShowed) {
+                    $(".answer-entry").hide();
+                    $("#answer-header").text(elem + '?');
+                    $("#answer-header").css('text-transform', 'capitalize');
+                    $("#answer-" + elem).show();
+                    lastShowed = elem;
+                } else { //remove the text
+                    $(".answer-entry").hide();
+                    $("#answer-header").text('');
+                    lastShowed = ''; //reinitialize
+                }
             });
-
         });
     });
     </script>
@@ -73,18 +80,19 @@
             <div class="info-container">
                 <h4 id="answer-header"></h4>
                 <div>
-                    <p class="answer-entry" id="answer-what">Just a countdown timer for the next February 9 (2015). A simple and clean site.</p>
+                    <p class="answer-entry fadeIn fadeOut" id="answer-what">Just a countdown timer for the next February 9 (2015).
+                        <br>A simple and clean site.</p>
                 </div>
                 <div>
-                    <p class="answer-entry" id="answer-why">Next February 9, 2015 is my deadline to present my degree final project and i did feel like make a constant reminder.
+                    <p class="answer-entry fadeIn fadeOut" id="answer-why">Next February 9, 2015 is my deadline to present my degree final project and i did feel like make a constant reminder.
                         <br>Just for fun.</p>
                 </div>
                 <div>
-                    <p class="answer-entry" id="answer-how"><a href="https:earthlandto.github.io/count4me" tittle="Repository">Here</a> you'll find this project's repository and you can do wahtever you want with it :)
+                    <p class="answer-entry fadeIn fadeOut" id="answer-how"><a href="https:earthlandto.github.io/count4me" tittle="Repository">Here</a> you'll find this project's repository and you can do wahtever you want with it :)
                         <br>[tip]: Change the variable <span class="code">target_date</span> in <span class="code"> js/script.js</span> file.</p>
                 </div>
                 <div>
-                    <p class="answer-entry" id="answer-who">Site by Alberto López. Visit my <a href="https://www.github.com/Earthlandto">Github</a> or <a href="https://es.linkedin.com/in/albertolopezsanchez">LinkedIn</a>.</div>
+                    <p class="answer-entry fadeIn fadeOut" id="answer-who">Site by Alberto López. Visit my <a href="https://www.github.com/Earthlandto">Github</a> or <a href="https://es.linkedin.com/in/albertolopezsanchez">LinkedIn</a>.</div>
             </div>
         </div>
         <span class="bg"></span>
