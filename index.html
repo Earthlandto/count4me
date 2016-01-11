@@ -1,10 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>A simple countdown for mi degree final proyect</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
     <script src="lib/jquery.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap.min.js"></script>
     <link rel="stylesheet" href="stylesheets/normalize.css">
@@ -13,27 +14,27 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
-    var lastShowed;
-    var questions = ['why', 'how', 'what', 'who'];
-    $(document).ready(function() {
+        var lastShowed;
+        var questions = ['why', 'how', 'what', 'who'];
+        $(document).ready(function() {
 
-        //Adding the click handler by question 'id'
-        questions.forEach(function(elem) {
-            $('#question-' + elem).click(function() {
-                if (elem !== lastShowed) {
-                    $(".answer-entry").hide();
-                    $("#answer-header").text(elem + '?');
-                    $("#answer-header").css('text-transform', 'capitalize');
-                    $("#answer-" + elem).show();
-                    lastShowed = elem;
-                } else { //remove the text
-                    $(".answer-entry").hide();
-                    $("#answer-header").text('');
-                    lastShowed = ''; //reinitialize
-                }
+            //Adding the click handler by question 'id'
+            questions.forEach(function(elem) {
+                $('#question-' + elem).click(function() {
+                    if (elem !== lastShowed) {
+                        $(".answer-entry").hide();
+                        $("#answer-header").text(elem + '?');
+                        $("#answer-header").css('text-transform', 'capitalize');
+                        $("#answer-" + elem).show();
+                        lastShowed = elem;
+                    } else { //remove the text
+                        $(".answer-entry").hide();
+                        $("#answer-header").text('');
+                        lastShowed = ''; //reinitialize
+                    }
+                });
             });
         });
-    });
     </script>
 </head>
 
@@ -90,10 +91,13 @@
                 </div>
                 <div>
                     <p class="answer-entry fadeIn fadeOut" id="answer-how"><a href="https:earthlandto.github.io/count4me" tittle="Repository">Here</a> you'll find this project's repository and you can do wahtever you want with it :)
-                        <br>[tip]: Change the variable <span class="code">target_date</span> in <span class="code"> js/script.js</span> file.</p>
+                        <br>[tip]: Change the variable
+                        <span class="code">target_date</span> in
+                        <span class="code"> js/script.js</span> file.</p>
                 </div>
                 <div>
-                    <p class="answer-entry fadeIn fadeOut" id="answer-who">Site by Alberto López. Visit my <a href="https://www.github.com/Earthlandto">Github</a> or <a href="https://es.linkedin.com/in/albertolopezsanchez">LinkedIn</a>.</div>
+                    <p class="answer-entry fadeIn fadeOut" id="answer-who">Site by Alberto López. Visit my <a href="https://www.github.com/Earthlandto">Github</a> or <a href="https://es.linkedin.com/in/albertolopezsanchez">LinkedIn</a>.</p>
+                </div>
             </div>
         </div>
         <span class="bg"></span>
