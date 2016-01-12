@@ -72,6 +72,7 @@ hr {
     display: none;
 }
 .answer-entry {
+    font-weight: 200;
     display: none;
 }
 .container-time > div {
