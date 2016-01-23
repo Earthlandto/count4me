@@ -11,6 +11,6 @@ Next February 9, 2015 is my deadline to present my degree final project :noteboo
 
 ###How?
 
-[Here](https:earthlandto.github.io/count4me) you can find this project repository and you can do wahtever you want. :wink:.
+[Here](https:earthlandto.github.io/count4me) you can find this project repository and you can do whatever you want. :wink:.
 
 **[Tip:]** Change the variable ``target_date`` in ``js/file`` file.
