@@ -1,5 +1,5 @@
 // set the date we're counting down to
-var target_date = new Date("Feb 24 2016 09:00:00").getTime();
+var target_date = new Date("Feb 24 2016 11:30:00").getTime();
 
 $(document).ready(function() {
 
@@ -20,10 +20,10 @@ $(document).ready(function() {
         minutes = parseInt(seconds_left / 60);
         seconds = parseInt(seconds_left % 60);
 
-	days = days>0? days: '0';
-	hours = hours > 0 ? hours : '00';
-	minutes = minutes > 0 ? minutes: '00';
-	seconds = seconds > 0 ? seconds : '00';
+        days = days > 0 ? days : '0';
+        hours = hours > 0 ? hours : '00';
+        minutes = minutes > 0 ? minutes : '00';
+        seconds = seconds > 0 ? seconds : '00';
 
         // change attibutes
         $("#days").text(days);

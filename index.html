@@ -2,106 +2,106 @@
 <html lang="en">
 
 <head>
-    <title>A simple countdown for mi degree final proyect</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
-    <script src="lib/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="stylesheets/normalize.css">
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/animations.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-        var lastShowed;
-        var questions = ['why', 'how', 'what', 'who'];
-        $(document).ready(function() {
+	<title>A simple countdown for mi degree final proyect</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<script src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="stylesheets/normalize.css">
+	<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="stylesheets/animations.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		var lastShowed;
+		var questions = ['why', 'how', 'what', 'who'];
+		$(document).ready(function() {
 
-            //Adding the click handler by question 'id'
-            questions.forEach(function(elem) {
-                $('#question-' + elem).click(function() {
-                    if (elem !== lastShowed) {
-                        $(".answer-entry").hide();
-                        $("#answer-header").text(elem + '?');
-                        $("#answer-header").css('text-transform', 'capitalize');
-                        $("#answer-" + elem).show();
-                        lastShowed = elem;
-                    } else { //remove the text
-                        $(".answer-entry").hide();
-                        $("#answer-header").text('');
-                        lastShowed = ''; //reinitialize
-                    }
-                });
-            });
-        });
-    </script>
+			//Adding the click handler by question 'id'
+			questions.forEach(function(elem) {
+				$('#question-' + elem).click(function() {
+					if (elem !== lastShowed) {
+						$(".answer-entry").hide();
+						$("#answer-header").text(elem + '?');
+						$("#answer-header").css('text-transform', 'capitalize');
+						$("#answer-" + elem).show();
+						lastShowed = elem;
+					} else { //remove the text
+						$(".answer-entry").hide();
+						$("#answer-header").text('');
+						lastShowed = ''; //reinitialize
+					}
+				});
+			});
+		});
+	</script>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="share-container">
-            <!--
+	<div class="container-fluid">
+		<div class="share-container">
+			<!--
             <span class="sharing_link_text">Tweet</span>
             <span class="icon-twitter"></span>
             <span class="sharing_link_text">it!<span>
             -->
-        </div>
-        <div class="countdown-container">
-            <div class="container-text">
-                <h2>Time remaining to deadline</h2>
-            </div>
-            <div class="time-container-days">
-                <span id="days" class="numbers"></span>
-                <span class="description">Days</span>
-                <span></span>
-            </div>
-            <div class="container-time">
-                <div class="time-container-hours">
-                    <span id="hours" class="numbers"></span>
-                    <span class="description">Hours</span>
-                </div>
-                <div class="time-container-minutes">
-                    <span id="minutes" class="numbers"></span>
-                    <span class="description">Minutes</span>
-                </div>
-                <div class="time-container-seconds">
-                    <span id="seconds" class="numbers"></span>
-                    <span class="description">Seconds</span>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="questions-info-container">
-            <div class="questions-container">
-                <span class="question-entry" id="question-what">What?</span>
-                <span class="question-entry" id="question-why">Why?</span>
-                <span class="question-entry" id="question-how">How?</span>
-                <span class="question-entry" id="question-who">Who?</span>
-            </div>
-            <div class="info-container">
-                <h4 id="answer-header"></h4>
-                <div>
-                    <p class="answer-entry fadeIn fadeOut" id="answer-what">Just a countdown timer for the next February 9 (2015).
-                        <br>A simple and clean site.</p>
-                </div>
-                <div>
-                    <p class="answer-entry fadeIn fadeOut" id="answer-why">Next February 9, 2015 is my deadline to present my degree final project and i did feel like make a constant reminder.
-                        <br>Just for fun.</p>
-                </div>
-                <div>
-                    <p class="answer-entry fadeIn fadeOut" id="answer-how"><a href="https:earthlandto.github.io/count4me" tittle="Repository">Here</a> you'll find this project's repository and you can do whatever you want with it :)
-                        <br>[tip]: Change the variable
-                        <span class="code">target_date</span> in
-                        <span class="code"> js/script.js</span> file.</p>
-                </div>
-                <div>
-                    <p class="answer-entry fadeIn fadeOut" id="answer-who">Site by Alberto López. Visit my <a href="https://www.github.com/Earthlandto">Github</a> or <a href="https://es.linkedin.com/in/albertolopezsanchez">LinkedIn</a>.</p>
-                </div>
-            </div>
-        </div>
-        <span class="bg"></span>
-    </div>
+		</div>
+		<div class="countdown-container">
+			<div class="container-text">
+				<h2>Time remaining to deadline</h2>
+			</div>
+			<div class="time-container-days">
+				<span id="days" class="numbers days_number"></span>
+				<span class="description">Days</span>
+				<span></span>
+			</div>
+			<div class="container-time">
+				<div class="time-container-hours">
+					<span id="hours" class="numbers"></span>
+					<span class="description">Hours</span>
+				</div>
+				<div class="time-container-minutes">
+					<span id="minutes" class="numbers"></span>
+					<span class="description">Minutes</span>
+				</div>
+				<div class="time-container-seconds">
+					<span id="seconds" class="numbers"></span>
+					<span class="description">Seconds</span>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="questions-info-container">
+			<div class="questions-container">
+				<span class="question-entry" id="question-what">What?</span>
+				<span class="question-entry" id="question-why">Why?</span>
+				<span class="question-entry" id="question-how">How?</span>
+				<span class="question-entry" id="question-who">Who?</span>
+			</div>
+			<div class="info-container">
+				<h4 id="answer-header"></h4>
+				<div>
+					<p class="answer-entry fadeIn fadeOut" id="answer-what">Just a countdown timer for the next February 9 (2015).
+						<br>A simple and clean site.</p>
+				</div>
+				<div>
+					<p class="answer-entry fadeIn fadeOut" id="answer-why">Next February 9, 2015 is my deadline to present my degree final project and i did feel like make a constant reminder.
+						<br>Just for fun.</p>
+				</div>
+				<div>
+					<p class="answer-entry fadeIn fadeOut" id="answer-how"><a href="https:earthlandto.github.io/count4me" tittle="Repository">Here</a> you'll find this project's repository and you can do whatever you want with it :)
+						<br>[tip]: Change the variable
+						<span class="code">target_date</span> in
+						<span class="code"> js/script.js</span> file.</p>
+				</div>
+				<div>
+					<p class="answer-entry fadeIn fadeOut" id="answer-who">Site by Alberto López. Visit my <a href="https://www.github.com/Earthlandto">Github</a> or <a href="https://es.linkedin.com/in/albertolopezsanchez">LinkedIn</a>.</p>
+				</div>
+			</div>
+		</div>
+		<span class="bg"></span>
+	</div>
 </body>
 
 </html>
